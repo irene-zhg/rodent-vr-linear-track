@@ -1,2 +1,8 @@
-# RodentVRLinearTrack
-An Unreal Engine virtual linear track built for rodent spatial navigation and behavioural experiments.
+# Looping Virtual Reality Linear Track with Telemetry Data Pipeline
+A closed-loop, custom-scripted virtual reality linear track for rodent behavioural experiments that logs real-time telemetry data built in Unreal Engine 5.5. 
+
+## Core VR Environment Features
+## Blueprint Architecture
+## Telemetry Data Pipeline
+## Applications & Impact
+## Limitations
