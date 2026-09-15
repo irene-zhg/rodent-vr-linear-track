@@ -11,7 +11,7 @@ A closed-loop, custom-scripted virtual reality linear track built in Unreal Engi
 7. [Next Steps](#next-steps)
 
 ## Project Demo
-- insert video of
+- insert video from presentation
 - 1. Name file
   2. Play project
   3. Slide computer mouse sensor along track, clicking M for marker
@@ -34,7 +34,7 @@ A closed-loop, custom-scripted virtual reality linear track built in Unreal Engi
 - data recorded (time/position/displacement)
 
 ## Applications & Impact
-- reduced EMI "noise" when used with tech like ephys
+- reduced EMI "noise" when used with tech like ephys = greater spike detection, more robust data collection and analysis
 - easier to incorporate future modification/do so without coding
 
 ## Limitations
