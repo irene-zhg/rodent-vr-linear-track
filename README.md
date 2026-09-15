@@ -1,5 +1,5 @@
 # Looping Virtual Reality Linear Track with Telemetry Data Pipeline
-A closed-loop, custom-scripted virtual reality linear track for rodent behavioural experiments that logs real-time telemetry data built in Unreal Engine 5.7. 
+A closed-loop, custom-scripted virtual reality linear track built in Unreal Engine 5.7. that logs real-time telemetry data. Designed for rodent spatial navigational and behavioural experiments with limited electromagnetic interference and low-latency data processing. 
 
 ## Table of Contents
 1. [Core VR Environment Features](#core-VR-environment-features)
