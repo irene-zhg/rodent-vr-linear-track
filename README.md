@@ -19,13 +19,14 @@ An optical motion sensor of a Logitech wireless computer mouse tracks movement f
 ## Background & Objective
 To investigate underlying neuronal circuitry in Alzheimer's Disease, the Zwang Lab records electrophysiology of mice with mesh electronics as they navigate a linear track in VR. 
 
-The prior setup had two main challenges: 
-(1) Running the VR system on MATLAB requires significant coding to make modifications.
-(2) The laser motion sensor introduces significant electromagnetic interference (EMI) into data recordings, making it difficult to isolate single-unt neuronal activity.
+The prior setup faced two primary bottlenecks: 
 
-The redesigned pipeline addresses these by:
-(1) Building the VR environment in Unreal Engine through blueprint scripting, a simplified, readable development platform for easier configuration and deployment
-(2) Using an optical motion sensor to reduce EMI
+1. **Platform Modification**: Running the VR system on MATLAB required extensive, low-level coding to make even small modifications
+2. **Electromagnetic Interference (EMI)**: The laser motion sensor introduced significant EMI into data recordings, making it difficult to isolate single-unit neuronal activity
+
+The redesigned pipeline addresses these challenges by:
+1. **Unreal Engine**: Built the VR environment in Unreal Engine using blueprint scripting, providing a simplified, readable, and visual development platform for rapid configuration and deployment
+(2) **Optical Motion Tracking**: Uses an optical motion sensor to reduce EMI
 
 This pipeline improves the precision of the data collected and improves downstream data analysis, providing a strong framework to facilitate future clinical translation.
 
