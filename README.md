@@ -38,7 +38,8 @@ This pipeline improves the precision of the data collected and improves downstre
 - restricted location - fwd (y-axis) movement only, but yaw/pitch/roll all possible w/ scripting
 - 5 distinct visual patterns for mouse memory/positional learning and memory encoding
 ## Blueprint Architecture
-- include photos from blueprint assets
+Separate photos of the game mode, kinetics, and teleportation scripting sections are included under blueprints [here](.
+![Complete Blueprint Scripting](assets/blueprints/complete-scripting.png)
 ## Telemetry Data Pipeline
 - name file with variable in UE 
 - set frame rate for save data intervals
