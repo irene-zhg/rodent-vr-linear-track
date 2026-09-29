@@ -24,7 +24,7 @@ The prior setup faced two primary bottlenecks:
 1. **Platform Modification**: Running the VR system on MATLAB required extensive, low-level coding to make even small modifications
 2. **Electromagnetic Interference (EMI)**: The laser motion sensor introduced significant EMI into data recordings, making it difficult to isolate single-unit neuronal activity
 
-The redesigned pipeline addresses these challenges by:
+The redesigned pipeline addresses these challenges through:
 1. **Unreal Engine**: Built the VR environment in Unreal Engine using blueprint scripting, providing a simplified, readable, and visual development platform for rapid configuration and deployment
 2. **Optical Motion Tracking**: Uses an optical motion sensor to reduce EMI
 
