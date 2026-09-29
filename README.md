@@ -26,7 +26,7 @@ The prior setup faced two primary bottlenecks:
 
 The redesigned pipeline addresses these challenges by:
 1. **Unreal Engine**: Built the VR environment in Unreal Engine using blueprint scripting, providing a simplified, readable, and visual development platform for rapid configuration and deployment
-(2) **Optical Motion Tracking**: Uses an optical motion sensor to reduce EMI
+2. **Optical Motion Tracking**: Uses an optical motion sensor to reduce EMI
 
 This pipeline improves the precision of the data collected and improves downstream data analysis, providing a strong framework to facilitate future clinical translation.
 
