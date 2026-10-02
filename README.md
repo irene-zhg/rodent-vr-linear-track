@@ -13,7 +13,7 @@ A closed-loop, custom-scripted virtual reality (VR) linear track that logs real-
 
 ## System Pipeline Demo
 ### Computer Mouse Sensor &rarr; Unreal Engine &rarr; Telemetry Output
-An optical motion sensor of a Logitech wireless computer mouse tracks movement from the treadmill. The movement is fed into the UE environment, which updates the position accordingly. Upon program exit, a .sav file is generated with the corresponding telemetry output and is converted to a .csv file. 
+An optical motion sensor of a Logitech wireless computer mouse tracks movement from the treadmill. The movement is fed into the UE environment, which updates the position accordingly. Upon program exit, a .sav file is generated with the corresponding telemetry output. The file is converted to a readable .csv file through the provided code. 
 - add demo videos (UE + sav)
 
 ## Background & Objective
@@ -38,7 +38,7 @@ This pipeline improves the precision of the data collected and improves downstre
 - restricted location - fwd (y-axis) movement only, but yaw/pitch/roll all possible w/ scripting
 - 5 distinct visual patterns for mouse memory/positional learning and memory encoding
 ## Blueprint Architecture
-Separate photos of the game mode, kinetics, and teleportation scripting sections are included under blueprints [here](assets/blueprints).
+Isolated photos of the game mode, kinetics, and teleportation scripting sections are included under blueprints [here](assets/blueprints).
 
 ![Complete Blueprint Scripting](assets/blueprints/complete-scripting.png)
 ## Telemetry Data Pipeline
