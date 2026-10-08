@@ -45,6 +45,7 @@ This pipeline facilitates cleaner recordings and improves downstream data analys
 Isolated photos of the game mode, kinetics, and teleportation scripting sections are included under blueprints [here](assets/blueprints).
 
 ![Complete Blueprint Scripting](assets/blueprints/complete-scripting.png)
+
 ## Pipeline & Repository Usage Guideline
 Usage requires Unreal Engine 5.7 Editor and Python.
 
@@ -56,13 +57,13 @@ Usage requires Unreal Engine 5.7 Editor and Python.
 5. Press esc inside the game viewport window to close the application. Exiting executes the final storage write as a .sav file inside Saved/SaveGames/.
 
 **Telemetry Data Post-Processing**
-1. Open terminal and run src/ and enter custom session file name when prompted. 
-
-- name file with variable in UE 
-- set frame rate for save data intervals
-- find sav in SavedGames folder
-- code to convert sav to csv and directly save to given folder path 
-- table output: Timestep_sec; player_X, Player_Y, player_Z, Player Yaw; Displacement
+1. Edit input and output path in src/UECoordinateConverter.py.
+2. Open terminal and run src/UECoordinateConverter.py and enter custom session file name when prompted.
+3. Script outputs the readable csv file directly into specified path with the following columns:
+- Timestamp_Sec
+- Player_X, Y, Z: 3D coordinate tracking path vectors (in cm)
+- Player_Yaw: Body/head orientation tracking angle (degrees)
+- Displacement
 
 ## Limitations
 - Built and tested on UE 5.7: have had challenges with migrating to other versions and maintaining functionality
