@@ -17,7 +17,7 @@ An optical motion sensor of a Logitech wireless computer mouse tracks movement f
 
 https://github.com/user-attachments/assets/a29de731-eb81-4aad-a683-b99e8f6e168a
 
-**Note that sensor was moved manually by hand across a surface for the demo video above, to see real-time use with treadmill, see demo [here](demo).**
+**Note that sensor was moved manually by hand across a surface for the demo video above, to see real-time use with treadmill and the physical setup, see demos [here](demo).**
 
 
 ## Background & Objective
