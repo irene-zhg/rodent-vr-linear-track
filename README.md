@@ -3,10 +3,10 @@ A closed-loop, custom-scripted virtual reality (VR) linear track built in Unreal
 
 ## Table of Contents
 1. [System Pipeline Demo](#system-pipeline-demo)
-2. [Background & Objective](#background-&-objective)
-3. [Core VR Environment Features](#core-VR-environment-features)
-4. [Blueprint Architecture](#blueprint-architecture)
-5. [Pipeline & Repository Usage Guide](#pipeline-&-repository-usage-guide)
+2. [Pipeline & Repository Usage Guide](#pipeline-&-repository-usage-guide)
+3. [Background & Objective](#background-&-objective)
+4. [Core VR Environment Features](#core-VR-environment-features)
+5. [Blueprint Architecture](#blueprint-architecture)
 6. [Limitations](#limitations)
 7. [Impact & Future Directions](#application-impact-&-future-directions)
 
@@ -18,6 +18,24 @@ https://github.com/user-attachments/assets/a29de731-eb81-4aad-a683-b99e8f6e168a
 
 **In the demo above, the sensor was moved by hand across a surface. For real-time use with a treadmill and the physical setup, see demos [here](demo).**
 
+## Pipeline & Repository Usage Guideline
+Usage requires Unreal Engine 5.7 Editor and Python.
+
+**Launching a Session**
+1. Open the source project inside UE 5.7.
+2. Select BP_XRPawn in viewport > Details Panel > Default > CustomFileName.
+3. Edit trial name.
+4. Click play to start session, click once to begin hands-free movement using the sensor. Telemetry logs data continuously into the system RAM at the specified frame rate limit.
+5. Press esc inside the game viewport window to close the application. Exiting executes the final storage write as a .sav file inside Saved/SaveGames/.
+
+**Telemetry Data Post-Processing**
+1. Edit input and output path in src/UECoordinateConverter.py.
+2. Open terminal and run src/UECoordinateConverter.py and enter custom session file name when prompted.
+3. Script outputs the readable csv file directly into specified path with the following columns:
+- Timestamp_Sec
+- Player_X, Y, Z: 3D coordinate tracking path vectors (in cm)
+- Player_Yaw: body/head orientation tracking angle (degrees)
+- Displacement
 
 ## Background & Objective
 The Zwang Lab studies neuronal circuitry in Alzheimer's Disease by recording electrophysiology from mice with mesh electronics as they navigate a VR linear track. 
@@ -45,25 +63,6 @@ This pipeline facilitates cleaner recordings and improves downstream data analys
 Isolated photos of the game mode, kinetics, and teleportation scripting sections are included under blueprints [here](assets/blueprints).
 
 ![Complete Blueprint Scripting](assets/blueprints/complete-scripting.png)
-
-## Pipeline & Repository Usage Guideline
-Usage requires Unreal Engine 5.7 Editor and Python.
-
-**Launching a Session**
-1. Open the source project inside UE 5.7.
-2. Select BP_XRPawn in viewport > Details Panel > Default > CustomFileName.
-3. Edit trial name.
-4. Click play to start session, click once to begin hands-free movement using the sensor. Telemetry logs data continuously into the system RAM at the specified frame rate limit.
-5. Press esc inside the game viewport window to close the application. Exiting executes the final storage write as a .sav file inside Saved/SaveGames/.
-
-**Telemetry Data Post-Processing**
-1. Edit input and output path in src/UECoordinateConverter.py.
-2. Open terminal and run src/UECoordinateConverter.py and enter custom session file name when prompted.
-3. Script outputs the readable csv file directly into specified path with the following columns:
-- Timestamp_Sec
-- Player_X, Y, Z: 3D coordinate tracking path vectors (in cm)
-- Player_Yaw: body/head orientation tracking angle (degrees)
-- Displacement
 
 ## Limitations
 - **UE Version-Restricted**: built and tested on UE 5.7. Encountered challenges with migrating to other versions and maintaining functionality.
