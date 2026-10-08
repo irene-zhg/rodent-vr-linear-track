@@ -16,6 +16,7 @@ A closed-loop, custom-scripted virtual reality (VR) linear track that logs real-
 An optical motion sensor of a Logitech wireless computer mouse tracks movement from a rodent treadmill. The movement is fed into the UE environment, which updates the position accordingly. Upon program exit, a .sav file is generated with the corresponding telemetry output. The file is converted to a readable .csv file through a Python processing script. 
 
 https://github.com/user-attachments/assets/a29de731-eb81-4aad-a683-b99e8f6e168a
+
 **Note that sensor was moved manually by hand across a surface for the demo video above, to see real-time use with treadmill, see demo [here](demo).**
 
 
