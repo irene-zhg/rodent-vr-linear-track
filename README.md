@@ -34,7 +34,7 @@ This pipeline addresses these challenges through:
 This pipeline facilitates cleaner recordings and improves downstream data analysis, providing a strong framework for future clinical translation.
 
 ## Core VR Environment Features
-- **Continuous backup saving**: telemetry is saved 
+- **Continuous backup saving**: telemetry logs into RAM at 120Hz to maintain smooth VR frame rate and background timer auto-saves to disk every 10 seconds to prevent data loss from system crashes.
 - **Custom file name**: set via an UE string variable in the editor before starting a session.
 - **Experimental keyboard marker**: pressing the 'M' key writes a time-aligned 'MARKER' to the outputted telemetry data to flag any experimental milestones.
 - **Looping teleportation**: reaching the end of the track triggers a 3-second delay before the pawn is teleported back to the origin.
@@ -62,7 +62,7 @@ Usage requires Unreal Engine 5.7 Editor and Python.
 3. Script outputs the readable csv file directly into specified path with the following columns:
 - Timestamp_Sec
 - Player_X, Y, Z: 3D coordinate tracking path vectors (in cm)
-- Player_Yaw: Body/head orientation tracking angle (degrees)
+- Player_Yaw: body/head orientation tracking angle (degrees)
 - Displacement
 
 ## Limitations
