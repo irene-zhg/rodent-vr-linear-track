@@ -8,7 +8,7 @@ A closed-loop, custom-scripted virtual reality (VR) linear track built in Unreal
 4. [Blueprint Architecture](#blueprint-architecture)
 5. [Pipeline & Repository Usage Guide](#pipeline-&-repository-usage-guide)
 6. [Limitations](#limitations)
-7. [Application Impact & Future Directions](#application-impact-&-future-directions)
+7. [Impact & Future Directions](#application-impact-&-future-directions)
 
 ## System Pipeline
 ### Computer Mouse Sensor &rarr; Unreal Engine &rarr; Telemetry Output
@@ -69,7 +69,7 @@ Usage requires Unreal Engine 5.7 Editor and Python.
 - **UE Version-Restricted**: built and tested on UE 5.7. Encountered challenges with migrating to other versions and maintaining functionality.
 - **SerialCOM Plugin**: does not work in UE 5.7 which prevents hardware integration with microcontrollers like Arduino, actively troubleshooting integration
 
-## Application Impact & Future Directions
+## Impact & Future Directions
 - **Recording Precision**: lower system EMI lowers Root Mean Squared (RMS) baseline noise, improving spike-sorting precision and single-unit data processing
 - **Clinical Translation**: UE's built-in XR compatibility allows for environments to be easily translated for parallel clinical studies with EEG
 - **Microcontroller Integration**: integrate serialCOM for UE 5.7 to add hardwire such as a lick sensor for reward experiments
