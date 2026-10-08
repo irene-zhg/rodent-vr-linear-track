@@ -6,10 +6,9 @@ A closed-loop, custom-scripted virtual reality (VR) linear track built in Unreal
 2. [Background & Objective](#background-&-objective)
 3. [Core VR Environment Features](#core-VR-environment-features)
 4. [Blueprint Architecture](#blueprint-architecture)
-5. [Telemetry Data Pipeline](#telemetry-data-pipeline)
-6. [Applications & Impact](#impact-applications-&-impact)
+5. [Pipeline & Repository Usage Guide](#pipeline-&-repository-usage-guide)
 7. [Limitations](#limitations)
-8. [Future Directions](#application-impact-&-future-directions)
+8. [Application Impact & Future Directions](#application-impact-&-future-directions)
 
 ## System Pipeline
 ### Computer Mouse Sensor &rarr; Unreal Engine &rarr; Telemetry Output
@@ -25,28 +24,40 @@ The Zwang Lab studies neuronal circuitry in Alzheimer's Disease by recording ele
 
 The prior setup had two bottlenecks: 
 
-1. **Platform Modification**: The MATLAB-based VR system required extensive, low-level coding for even small modifications
-2. **Electromagnetic Interference (EMI)**: The laser motion sensor introduced significant EMI into data, making it difficult to isolate single-unit neuronal activity
+1. **Platform Modification**: The MATLAB-based VR system required extensive, low-level coding for even small modifications.
+2. **Electromagnetic Interference (EMI)**: The laser motion sensor introduced significant EMI into data, making it difficult to isolate single-unit neuronal activity.
 
 This pipeline addresses these challenges through:
-1. **Unreal Engine**: The environment is built with blueprint scripting, providing a simplified, readable, and visual development platform for rapid configuration and deployment
-2. **Optical Motion Tracking**: An optical motion sensor replaces the laser sensor to reduce EMI
+1. **Unreal Engine**: The environment is built with blueprint scripting, providing a simplified, readable, and visual development platform for rapid configuration and deployment.
+2. **Optical Motion Tracking**: An optical motion sensor replaces the laser sensor to reduce EMI.
 
 This pipeline facilitates cleaner recordings and improves downstream data analysis, providing a strong framework for future clinical translation.
 
 ## Core VR Environment Features
-- Continuous backup saving: telemetry is saved 
-- Custom file name: set via an UE string variable in the editor before starting a session
-- Experimental keyboard marker: pressing the 'M' key writes a time-aligned 'MARKER' to the outputted telemetry data to flag any experimental milestones
-- Looping teleportation: reaching the end of the track triggers a 3-second delay before the pawn is teleported back to the origin
-- Restricted locomotion: forward (y-axis) only, but yaw, pitch, and roll can be enabled with scripting edits
-- Visual Landmarks: 5 distinct visual wall patterns built from UE materials, enabling spatial memory encoding and position learning
+- **Continuous backup saving**: telemetry is saved 
+- **Custom file name**: set via an UE string variable in the editor before starting a session.
+- **Experimental keyboard marker**: pressing the 'M' key writes a time-aligned 'MARKER' to the outputted telemetry data to flag any experimental milestones.
+- **Looping teleportation**: reaching the end of the track triggers a 3-second delay before the pawn is teleported back to the origin.
+- **Restricted locomotion**: forward (y-axis) only, but yaw, pitch, and roll can be enabled with scripting edits.
+- **Visual Landmarks**: 5 distinct visual wall patterns built from UE materials, enabling spatial memory encoding and position learning.
 
 ## Blueprint Architecture
 Isolated photos of the game mode, kinetics, and teleportation scripting sections are included under blueprints [here](assets/blueprints).
 
 ![Complete Blueprint Scripting](assets/blueprints/complete-scripting.png)
-## Telemetry Data Pipeline
+## Pipeline & Repository Usage Guideline
+Usage requires Unreal Engine 5.7 Editor and Python.
+
+**Launching a Session**
+1. Open the source project inside UE 5.7.
+2. Select BP_XRPawn in viewport > Details Panel > Default > CustomFileName.
+3. Edit trial name.
+4. Click play to start session, click once to begin hands-free movement using the sensor. Telemetry logs data continuously into the system RAM at the specified frame rate limit.
+5. Press esc inside the game viewport window to close the application. Exiting executes the final storage write as a .sav file inside Saved/SaveGames/.
+
+**Telemetry Data Post-Processing**
+1. Open terminal and run src/ and enter custom session file name when prompted. 
+
 - name file with variable in UE 
 - set frame rate for save data intervals
 - find sav in SavedGames folder
