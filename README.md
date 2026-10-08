@@ -36,7 +36,7 @@ This pipeline improves the precision of the data collected and improves downstre
 - experimental keyboard marker
 - teleportation looping w/ 3 second delay
 - restricted location - fwd (y-axis) movement only, but yaw/pitch/roll all possible w/ scripting
-- 5 distinct visual patterns for mouse memory/positional learning and memory encoding
+- 5 distinct visual patterns using materials in UE for mouse memory/positional learning and memory encoding
 ## Blueprint Architecture
 Isolated photos of the game mode, kinetics, and teleportation scripting sections are included under blueprints [here](assets/blueprints).
 
