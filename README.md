@@ -2,7 +2,7 @@
 A closed-loop, custom-scripted virtual reality (VR) linear track built in Unreal Engine (UE) 5.7 that logs real-time telemetry data. Designed for rodent navigational and behavioural experiments with limited electromagnetic interference (EMI) and low-latency data processing for use alongside electrophysiology. 
 
 ## Table of Contents
-1. [Demo](#demo)
+1. [Pipeline Demo](#pipeline-demo)
 2. [Pipeline & Repository Usage Guide](#pipeline-&-repository-usage-guide)
 3. [Background & Objective](#background-&-objective)
 4. [Core VR Environment Features](#core-VR-environment-features)
@@ -10,7 +10,7 @@ A closed-loop, custom-scripted virtual reality (VR) linear track built in Unreal
 6. [Limitations](#limitations)
 7. [Impact & Future Directions](#application-impact-&-future-directions)
 
-## Demo
+## Pipeline Demo
 ### Computer Mouse Sensor &rarr; Unreal Engine &rarr; Telemetry Output
 An optical motion sensor (Logitech wireless computer mouse) tracks treadmill movement from a rodent and updates the player position in Unreal Engine. On program exit, an automated final save writes the raw telemetry data to a .sav file. The file is converted to a readable .csv sheet via Python.
 
@@ -18,7 +18,7 @@ https://github.com/user-attachments/assets/a29de731-eb81-4aad-a683-b99e8f6e168a
 
 **In the demo above, the sensor was moved by hand across a surface. For real-time use with a treadmill and the physical setup, see demos [here](demo).**
 
-## Pipeline & Repository Usage Guideline
+## Pipeline & Repository Usage Guide
 Usage requires Unreal Engine 5.7 Editor and Python.
 
 **Launching a Session**
