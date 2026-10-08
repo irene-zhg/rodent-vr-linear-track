@@ -11,10 +11,11 @@ A closed-loop, custom-scripted virtual reality (VR) linear track that logs real-
 7. [Limitations](#limitations)
 8. [Future Directions](#future-directions)
 
-## System Pipeline Demo
+## System Pipeline
 ### Computer Mouse Sensor &rarr; Unreal Engine &rarr; Telemetry Output
 An optical motion sensor of a Logitech wireless computer mouse tracks movement from a rodent treadmill. The movement is fed into the UE environment, which updates the position accordingly. Upon program exit, a .sav file is generated with the corresponding telemetry output. The file is converted to a readable .csv file through a Python processing script. 
-- add demo videos (UE + sav)
+
+
 
 ## Background & Objective
 To investigate underlying neuronal circuitry in Alzheimer's Disease, the Zwang Lab records electrophysiology of mice with mesh electronics as they navigate a linear track in VR. 
